@@ -63,3 +63,6 @@ typings/
 *.tfvars
 *-credentials.json
 terraform.tfstate.*.backup
+
+keys.json
+wiethecgi.json

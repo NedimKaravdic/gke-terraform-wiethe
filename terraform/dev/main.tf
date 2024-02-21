@@ -4,7 +4,8 @@ locals {
 
 terraform {
   backend "gcs" {
-    bucket = "gke-tfstate-dev"
+    bucket = "wiethecgi-dev-tf-state"
+    credentials = "wiethecgi-key.json"
   }
 }
 
@@ -13,7 +14,7 @@ provider google {
   region  = "${var.region}"
   zone    = "${var.zone}"
   impersonate_service_account = var.tf_service_account
-  credentials = file("wiethecgi-key.json")
+
 }
 
 provider "google-beta" {
